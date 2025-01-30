@@ -3,13 +3,13 @@ import {
   View, Text, TextInput, FlatList, TouchableOpacity, Switch, 
   Alert, StyleSheet, KeyboardAvoidingView, Platform 
 } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons"; // For delete icon
-import { Button, Card, Provider as PaperProvider } from "react-native-paper"; // UI Components
-import Toast from "react-native-toast-message"; // Toast messages
-import { SafeAreaView } from "react-native-safe-area-context"; // For safe area padding
+import { MaterialIcons } from "@expo/vector-icons"; 
+import { Button, Card, Provider as PaperProvider } from "react-native-paper";
+import Toast from "react-native-toast-message"; 
+import { SafeAreaView } from "react-native-safe-area-context"; 
 
 export default function App() {
-  const [tasks, setTasks] = useState([]); // State for tasks list
+  const [tasks, setTasks] = useState([]); 
   const [title, setTitle] = useState(""); // State for input field
   const [buttonActive, setButtonActive] = useState(false); // Track if button is active
 
@@ -122,12 +122,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20, // Add padding to avoid overlap with the status bar
+    paddingTop: 20, 
     backgroundColor: "#f4f4f4",
   },
   innerContainer: {
     flex: 1,
-    paddingHorizontal: 20, // Added padding for left/right
+    paddingHorizontal: 20,
   },
   heading: {
     fontSize: 26,
@@ -152,16 +152,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     marginBottom: 10,
     fontSize: 16,
-    width: "100%",  // Full width for input box
+    width: "100%",
   },
   addButton: {
     marginBottom: 20,
-    backgroundColor: "#09b7e3",
-    width: "100%",  // Full width for button
+    backgroundColor: "#099ee3",
+    width: "100%",  
     paddingVertical: 12,
   },
   buttonInactive: {
-    backgroundColor: "#B0BEC5",  // Grey out inactive button
+    backgroundColor: "#B0BEC5",  
   },
   taskCard: {
     padding: 12,
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   taskDone: {
-    backgroundColor: "#D4EDDA", // Light green for completed tasks
+    backgroundColor: "#D4EDDA", 
   },
   taskRow: {
     flexDirection: "row",
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "500",
     color: "#333",
-    flex: 1,  // Allow text to take available space
+    flex: 1,  
   },
   taskCompleted: {
     textDecorationLine: "line-through",
