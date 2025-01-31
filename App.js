@@ -10,8 +10,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   const [tasks, setTasks] = useState([]); 
-  const [title, setTitle] = useState(""); // State for input field
-  const [buttonActive, setButtonActive] = useState(false); // Track if button is active
+  const [title, setTitle] = useState(""); 
+  const [buttonActive, setButtonActive] = useState(false); 
 
   // Function to Add Task
   const addTask = () => {
@@ -20,8 +20,8 @@ export default function App() {
       return;
     }
     setTasks([...tasks, { id: Date.now().toString(), title, status: "due" }]);
-    setTitle(""); // Clear input field
-    setButtonActive(false); // Deactivate button after adding task
+    setTitle("");
+    setButtonActive(false); 
     Toast.show({ type: "success", text1: "Task Added", text2: "Your task has been successfully added." });
   };
 
@@ -34,7 +34,7 @@ export default function App() {
     );
   };
 
-  // Function to Delete Task with Confirmation
+  // Function to Delete/remove Task with Confirmation
   const deleteTask = (taskId) => {
     Alert.alert(
       "Delete Task",
@@ -55,7 +55,7 @@ export default function App() {
   // Update button active state when user types
   const handleTextChange = (text) => {
     setTitle(text);
-    setButtonActive(text.trim().length > 0); // Activate button when input is not empty
+    setButtonActive(text.trim().length > 0); 
   };
 
   return (
